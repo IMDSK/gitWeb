@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnText").on("click", function(){
+                // alert($("p").text());
+                //alert($("p").html());
+                alert($("#txtWeb").html());
+            });
+
+            $("#btnShowName").on("click", function(){
+                alert($("#txtName").val("Diooooooooo!"));
+            });
+
+            $("#btnGetLink").on("click", function(){
+                alert($("a").attr("href"));
+            });
+
+            $("#btnSetlink").on("click", function(){
+                $("a").attr("href","https://www.bing.com");
+            })
+
+            $("#btnGetCSS").on("click", function(){
+                alert($("#txtCSS").css("color"));
+            })
+
+            $("#btnGetCSS").on("click", function(){
+                alert($("#txtCSS").css("color", "brown"));
+            })
+        });
+    </script>
+</head>
+<body>
+
+    <p id="txtWeb"><i>Jotarooooooooooooooooo</i></p>
+    <button id="btnText">Get</button>
+
+    <p>Name <input type="text" id="txtName"></p>
+    <button id="btnShowName">Show name</button>
+
+    <p><a href="https://www.google.com">Google</a></p>
+    <button id="btnGetLink">Get link</button>
+    <button id="btnSetLink">Set link</button>
+
+</body>
+</html>

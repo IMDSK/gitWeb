@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style>
+        table,th,td{
+            border : 1px solid black;
+        }  
+    </style>
+</head>
+<body>
+    <!-- table -->
+    <table id = "tbStudent"></table>
+
+    
+
+    <script>
+        //data
+        let student = [
+            {name:"ana",age: 16},
+            {name:"along",age: 16},
+            {name:"alang",age: 16}
+        ];
+
+        //create table
+        createTable();
+        
+        function createTable(){
+            let tbStudent = document.querySelector("#tbStudent");
+            let display ="<tr><th>name</th> <th>age</th> <th>action</th></tr>";
+            //display = display+"<tr><th>"+student[0].name+"</th><th>"+age[0].age+"</th></tr>";
+            for(let i=0; i<student.length;i++){
+                display = display + "<tr><td>"+student[i].name+"</td> <td>"+student[i].age+"</td><td><button onclick='del("+i+")'>Delete</button></td></tr>";
+            }
+            tbStudent.innerHTML = display;
+        }
+
+        function del(i){
+            //student.splice(0,1);
+            alert(i);        
+            }
+    </script>
+
+</body>
+</html>

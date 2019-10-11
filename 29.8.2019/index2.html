@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Inputs</title>
+</head>
+
+        <body>
+            <h2>login</h2>
+                <p>
+                    Username :<input type="text" id="txtUsername"><br><br>
+                    Password :<input type"Password" id="txtPassword">
+                </p>
+
+                <p>
+                    <button type="button" onclick="login()">LOGIN</button>
+                    <button type="button" onclick="reset()">RESET</button>
+                </p>
+
+                <script>
+                    function login(){
+                        //alert("Login");
+                        var txtUsername = document.querySelector("txtUsername");
+                        var username = textUsername.value;
+                        //aler("username");
+                        var password = document.querySelector("txtPassword").value;
+                        alert(username + " " + password);
+                    }
+
+                    function reset(){
+                        alert("Reset");
+                    }
+                </script>
+        </body>

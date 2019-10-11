@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("h1").html("<i>Good afternoon</i>");
+            $("#john").text("Peter");
+            $(".red").css("color", "blue");
+            // document.querySelector("button").addEventListener("click", function(){
+            //     alert("test");
+            // });
+            
+            // $("button").click(function(){
+            //     alert("test");
+            // })
+
+            $("button").on({
+                click : function(){
+                    alert("test");
+                },
+                mouseenter : function(){
+                    $(this).css("background-color", "green");
+                },
+                mouseleave : function(){
+                    $(this).css("background-color","lightgray")
+                }
+            });
+        });
+    </script>    
+
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <p id="john" class="red">John</p>
+    <p id="sarah" class="red">Sarah</p>
+    <button>okay</button>
+</body>
+    <script>
+        
+    </script>
+</html>

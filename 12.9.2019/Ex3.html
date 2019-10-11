@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnRadio").on("click", function(){
+                let gender = $("input[name='gender']:checked").val();
+                // let x = document.querySelector("input[name='gender']:checked").value;
+                alert(gender);
+            });
+
+            $("#btnRadio").on("click", function(){
+                var gender =$("#seclectGender").val();
+                // let x = document.querySelector("#select")
+                alert(gender);
+            })
+
+            $("#btnGetDay").on("click", function(){
+                let days =$("input[name='day']:checked");
+                // let x = document.querySelector("#select")
+                
+
+                let output = "";
+                for(let i=0; i<days.length; i++){
+                    output = output + days[i].value + "\n";
+                }
+                alert(output);
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>Radio button</h1>
+    <input type="radio" name="gender" value="1"> Male
+    <input type="radio" name="gender" value="2"> Female
+    <input type="radio" name="gender" value="3"> other <br><br>
+    <button id="btnRadio">Submit</button>
+
+    <h1>Drop down</h1>
+    <select id ="selectGender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    <button id="btnDropdown">Check</button>
+
+    <h1>Checkbox</h1>
+    <input type="checkbox" name="day" value="mon">Monday<br>
+    <input type="checkbox" name="day" value="tue">Tuesday<br>
+    <input type="checkbox" name="day" value="wen">Wenesday<br>
+    <input type="checkbox" name="day" value="th">Thursday<br>
+    <input type="checkbox" name="day" value="fri">Friday<br>
+    <input type="checkbox" name="day" value="sat">Saturday<br>
+    <input type="checkbox" name="day" value="sun">Sunday<br>
+    <button id="btnGetDay">Check</button>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+        <body>
+            <h2>Radio button</h2>
+            <input type="radio" name="gender" value="male">male
+            <input type="radio" name="gender" value="Female">female
+            <input type="radio" name="gender" value="other" checked >other<br>
+            <button type="button" onclick="getRadio()">Submit</button>
+
+            <br><br>
+            <select id="fruit">
+            <option value="blank">Choose one</option>
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>  
+            </select><br>
+            <button type="button" onclick="getFruit()">Submit</button>
+
+            <br><br>
+            <input type="checkbox" name="mobile" value="apple">Apple
+            <input type="checkbox" name="mobile" value="pixel">Pixel
+            <input type="checkbox" name="mobile" value="note10">note10<br>
+            <button type="button" onclick="buy()">Buy</button>
+
+                <script>
+                    function getRadio(){
+                        //alert("radio");
+                        var result = document.querySelector("input[name=gender]:checked").value;
+                        alert(result);
+                    }
+
+                    function getFruit(){
+                        var fruit = document.querySelector("#fruit");
+                        var result = fruit.options[fruit.selectedIndex].value;
+                        alert(result);
+                    }
+
+                    function buy(){
+                        //alert("buy");
+                        var phones = document.querySelectorAll("input[name='mobile']:checked");
+                        //alert(phones.length);
+                        if(phones.length == 0){
+                            alert("Select somethings");
+                        }
+                        else{
+                            //alert(phones[0].value);
+                            var choice = "";
+                            for (var i=0; i<phones.length; i++){
+                                choice = choice + " " +phones[i].value;                            
+                            }
+                            alert(choice);
+                        }
+
+                    }
+
+                </script>
+        </body>
+</html>
